@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% block content %}
+<div
+  class="min-h-screen w-full flex bg-gradient-to-br from-blue-800 to-cyan-400 p-4"
+>
+  <div class="w-full lg:w-2/5 flex flex-col mx-auto lg:ml-20 gap-6">
+    <!-- Heading -->
+    <div>
+      <h1 class="text-yellow-400 text-3xl sm:text-4xl font-bold">About me</h1>
+    </div>
+
+    <!-- About paragraph -->
+    <div>
+      <p class="font-medium text-base sm:text-lg text-white leading-relaxed">
+        I am a passionate and skilled software developer. Driven by curiosity
+        and innovation, I enjoy solving complex problems with clean, effective
+        code. I am trilingual, fluent in English, Spanish, and Polish. With
+        every project, I bring dedication, creativity, and precision.
+      </p>
+    </div>
+
+    <!-- Section title -->
+    <div>
+      <p class="text-yellow-600 text-lg sm:text-xl font-bold">
+        Frameworks & Technologies
+      </p>
+    </div>
+
+    <!-- Tech list -->
+    <div class="flex flex-col gap-4">
+      <div>
+        <p class="font-medium text-white">React: 1.5 years</p>
+        <div
+          class="w-3/4 bg-gradient-to-r from-blue-400 to-blue-600 h-4 rounded-sm shadow-lg"
+        ></div>
+      </div>
+      <div>
+        <p class="font-medium text-white">React Native + Expo: 1 year</p>
+        <div
+          class="w-1/2 bg-gradient-to-r from-blue-700 to-blue-900 h-4 rounded-sm shadow-lg"
+        ></div>
+      </div>
+      <div>
+        <p class="font-medium text-white">Django: 1 year</p>
+        <div
+          class="w-1/2 bg-gradient-to-r from-green-800 to-green-900 h-4 rounded-sm shadow-lg"
+        ></div>
+      </div>
+      <div>
+        <p class="font-medium text-white">Spring Boot: 0.5 years</p>
+        <div
+          class="w-1/4 bg-gradient-to-r from-rose-500 to-rose-600 h-4 rounded-sm shadow-lg"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div
+      class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6"
+    >
+      <a
+        href="{% url 'about' %}"
+        class="px-4 py-2 border-yellow-300 border-2 rounded-md text-center text-yellow-200 font-bold hover:bg-amber-300 hover:text-white transition duration-150 w-full sm:w-1/2"
+      >
+        LANGUAGES
+      </a>
+      <a
+        href="{% url 'dev' %}"
+        class="px-4 py-2 border-yellow-300 border-2 rounded-md text-center text-yellow-200 font-bold hover:bg-amber-300 hover:text-white transition duration-150 w-full sm:w-1/2"
+      >
+        DEVELOPMENT TOOLS
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

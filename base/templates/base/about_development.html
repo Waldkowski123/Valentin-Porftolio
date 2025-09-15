@@ -1,0 +1,69 @@
+{% extends "base.html" %} {% block content %}
+<div
+  class="min-h-screen w-full flex bg-gradient-to-br from-blue-800 to-cyan-400 p-4"
+>
+  <div class="w-full lg:w-2/5 flex flex-col mx-auto lg:ml-20 gap-6">
+    <!-- Heading -->
+    <div>
+      <h1 class="text-yellow-400 text-3xl sm:text-4xl font-bold">About me</h1>
+    </div>
+
+    <!-- About paragraph -->
+    <div>
+      <p class="font-medium text-base sm:text-lg text-white leading-relaxed">
+        I am a passionate and skilled software developer. Driven by curiosity
+        and innovation, I enjoy solving complex problems with clean, effective
+        code. I am trilingual, fluent in English, Spanish, and Polish. With
+        every project, I bring dedication, creativity, and precision.
+      </p>
+    </div>
+
+    <!-- Section title -->
+    <div>
+      <p class="text-yellow-600 text-lg sm:text-xl font-bold">
+        Development Tools
+      </p>
+    </div>
+
+    <!-- Tools list -->
+    <div class="flex flex-col gap-4">
+      <div>
+        <p class="font-medium text-white">Git: 4 years</p>
+        <div
+          class="w-full bg-gradient-to-r from-gray-700 to-gray-800 h-4 rounded-sm shadow-lg"
+        ></div>
+      </div>
+      <div>
+        <p class="font-medium text-white">Postman: 1 year</p>
+        <div
+          class="w-3/12 bg-gradient-to-r from-orange-700 to-orange-800 h-4 rounded-sm shadow-lg"
+        ></div>
+      </div>
+      <div>
+        <p class="font-medium text-white">Docker: 0.3 years</p>
+        <div
+          class="w-1/12 bg-gradient-to-r from-fuchsia-500 to-fuchsia-800 h-4 rounded-sm shadow-lg"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div
+      class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6"
+    >
+      <a
+        href="{% url 'about' %}"
+        class="px-4 py-2 border-yellow-300 border-2 rounded-md text-center text-yellow-200 font-bold hover:bg-amber-300 hover:text-white transition duration-150 w-full sm:w-1/2"
+      >
+        LANGUAGES
+      </a>
+      <a
+        href="{% url 'technologies' %}"
+        class="px-4 py-2 border-yellow-300 border-2 rounded-md text-center text-yellow-200 font-bold hover:bg-amber-300 hover:text-white transition duration-150 w-full sm:w-1/2"
+      >
+        FRAMEWORKS/TECHNOLOGIES
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

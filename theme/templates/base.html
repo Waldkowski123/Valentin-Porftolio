@@ -1,0 +1,24 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+  <head>
+    <title>Valentin Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% tailwind_css %}
+  </head>
+
+  <body class="flex flex-col h-full w-full lg:md:flex-row">
+    {% include 'nav.html' %} {% block content %} {% endblock content %}
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("9BQnMbKl10YCR8bUy"); // replace with your EmailJS public key
+      })();
+    </script>
+  </body>
+</html>

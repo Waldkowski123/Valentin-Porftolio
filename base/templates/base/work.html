@@ -1,0 +1,149 @@
+{% extends "base.html" %} {% block content %}
+<div class="w-full h-full flex bg-gradient-to-br from-blue-800 to-cyan-400">
+  <div class="h-full w-full lg:w-3/5 flex flex-col items-center">
+    <div class="h-1/12 w-4/5 flex items-center justify-center">
+      <h1 class="text-yellow-400 text-4xl font-bold">Work Experience</h1>
+    </div>
+    <div
+      class="h-11/12 w-2/3 flex flex-col items-center gap-3 mt-3 overflow-auto animate-slideDown"
+    >
+      <!-- Cronn Polska card -->
+      <div
+        class="w-11/12 bg-gradient-to-r from-gray-800 to-gray-950 rounded-xl shadow-xl mt-3 cursor-pointer pointer-cursor hover:from-gray-700 hover:to-gray-800 transition duration-300"
+        onclick="toggleDetails('cronnDetails'); toggleDetails('click1')"
+      >
+        <div class="p-4 flex flex-col gap-2">
+          <div>
+            <h2 class="text-lg font-lg text-yellow-300">
+              <a
+                href="https://www.cronn.de/"
+                class="border-yellow-300 hover:border-b-1"
+              >
+                Cronn Polska Sp. z o.o.
+              </a>
+            </h2>
+          </div>
+          <div>
+            <h2 class="text-white text-sm font-light click1" id="click1">
+              Click for more
+            </h2>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-yellow-200">
+              May-October 2023
+            </h2>
+          </div>
+          <div id="cronnDetails" class="mt-2 hidden text-white text-sm">
+            Had a 2 month internship where I
+            <ul class="list-disc ml-5 mt-3 gap-1 flex flex-col">
+              <li>
+                Worked on an amployee management system with React, Typecript,
+                Tailwindcss
+              </li>
+              <li>Learned about REST API's, Spring Boot, Java</li>
+              <li>
+                Touched a bit of docker, and went through many git rebases
+              </li>
+            </ul>
+            <span class="font-bold"
+              >I learned a lot during those 2 months.</span
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-11/12 bg-gradient-to-r from-gray-800 to-gray-950 rounded-xl shadow-xl mt-3 cursor-pointer pointer-cursor hover:from-gray-700 hover:to-gray-800 transition duration-300"
+        onclick="toggleDetails('skoolDetails'); toggleDetails('click2')"
+      >
+        <div class="p-4 flex flex-col gap-2">
+          <div>
+            <h2 class="text-lg font-lg text-yellow-300">Skoolapp Sp. z o.o.</h2>
+          </div>
+          <div>
+            <h2 class="text-white text-sm font-light clickText" id="click2">
+              Click for more
+            </h2>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-yellow-200">2023-2024</h2>
+          </div>
+          <div id="skoolDetails" class="mt-2 hidden text-white text-sm">
+            <ul class="list-disc ml-5">
+              <li>
+                Helped develop a cross platform app with React Native and Expo
+                Go
+              </li>
+              <li>Designed relational databases with PostgreSQL</li>
+              <li>
+                Helped win 2nd place in
+                <a
+                  class="text-blue-500 underline cursor-pointer"
+                  href="https://kandydacipb.edu.pl/2-edycje-konkursu-wschodzacy-innowatorzy-wygrali-uczniowie-z-vi-lo-bialegostoku/"
+                  >Emerging innovators</a
+                >
+                Tournament
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-11/12 bg-gradient-to-r from-gray-800 to-gray-950 rounded-xl shadow-xl mt-3 cursor-pointer pointer-cursor hover:from-gray-700 hover:to-gray-800 transition duration-300"
+        onclick="toggleDetails('intratelDetails'); toggleDetails('click3')"
+      >
+        <div class="p-4 flex flex-col gap-2">
+          <div>
+            <h2 class="text-lg font-lg text-yellow-300">
+              <a
+                href="https://intratel.pl/"
+                class="border-yellow-300 hover:border-b-1"
+                >Intratel Sp. z o.o.</a
+              >
+            </h2>
+          </div>
+          <div>
+            <h2 class="text-white text-sm font-light clickText" id="click3">
+              Click for more
+            </h2>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-yellow-200">Jul-Aug 2021</h2>
+          </div>
+          <div id="intratelDetails" class="mt-2 hidden text-white text-sm">
+            Completed a one-month internship
+            <ul class="list-disc ml-5 flex flex-col gap-1 mt-3">
+              <li>Worked on deep learning projects using Python</li>
+              <li>Assisted with testing and performance checks</li>
+              <li>Collaborated in a team and used Git for version control.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-1"></div>
+</div>
+
+<script>
+  function toggleDetails(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+<style>
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .animate-slideDown {
+    animation: slideDown 0.7s ease-out forwards;
+  }
+</style>
+{% endblock content %}
