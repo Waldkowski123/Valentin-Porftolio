@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'valentinPortfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangoPortfolioDB',
+        'NAME': 'djangoportfoliodb',
         'USER': 'admin',
         'PASSWORD': '123',
         'HOST': 'localhost',
